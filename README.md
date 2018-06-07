@@ -1,5 +1,5 @@
 
-![travis](https://travis-ci.org/zacharysells/ebs-backups.svg?branch=master)
+![travis](https://travis-ci.org/EverOps/aws-ebs-backups.svg?branch=master)
 
 # aws-ebs-backups
 This is the source of a Docker image that can be used to generate EBS backups. 
