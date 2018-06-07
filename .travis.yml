@@ -1,11 +1,11 @@
 sudo: required
 language: generic
-
 services:
   - docker
-
 after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-    make push;
-    fi
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then docker login -u "$DOCKER_USERNAME" -p
+  "$DOCKER_PASSWORD"; make push; fi
+env:
+  global:
+  - secure: OeiOp/Oq0XqACGc8508eGcD02vjan/ACzgkf6lH0zoibGhaZ4hdEK194Xc0pwqm/T8xZPGIDl/GAZ4Eapt8/333I2GAcY5V8gePqu62kLC2KbgTir+QuG7gWyoxgtXmnrmFqCFUHzTwPB9NuxR90eUuWaHhJmi2HszYhPoR2xmfiLnG2AzHZ8HRufUrGEOfdBAq9XKZg3AwbflqwdJk4r+oQpWb9eC1lAXQBVgTAfNoGcwaehvy1/fbo/HrRdARhqUz4JRfjH5DVJZe0DIlyHmTp+K2ICWFS5Ly1eEXrQldQsKU8+jeyXd+q2d3RkOlsWCWb4ofkTPsRoLEwujhhrTCf+IAOfT4DakQTA1cCqQkXh6PyIAvzJCNwsuSXcxoU6tBFvPbcgcznxewumXvOzx6IWQa6NG7cq1qbA3DPuH9PbNG86+n2TRlAbjvDUM9VGmsE/AHbzJJf8nMrertlUMT7jePgTWb3a8EyWumUozp8h0VyvqS+ZRrDulLYhVC/3mZtjomSCyReirDs2xbGHjvHGxmtuqWxQRnE+Ha30zfWVobblYKeb34n43RvYRFuM31Dl8VzrHr6sNnO0wWpYL1C6UnqLrSjC03CJ3xlHdfqmXwQduO0jJoLFATTQpGobqwofKNHdD9C8n+L8EHn24/bdLa4XvRaiLmwONKNqNU=
+  - secure: fXyoXsLDCtc5yc7OOuYq4d/SISIdC34vfzYrSsY/sldgFoG0MnUvHcdTuwqTlE1Fiywdgl/dOnvZdWSl3E4VgKTT0kiQVOkHZwedScoRrQuyfsV+a0y8pHr1dXuYNh5DJ+0UeaSmvXnPBcvb+4/HKvoAhE7+khJdyXM02owodat5nwu9J4jGuIpRjaJQVOcR+qVcm+RXKDWdwv6OJ+ssEzu1aLLVuWdoHMSXQtT/IGHKfWmT/tVK87sT5MDKVWmcEqksKgyeVzrLBvgpVjuQaGWd6XHPCLyiokAPQSHfJB3lyZ+zdrnvHqe3QFjGp6t2yDROc5n1sS4xqnqR8YkR5y23od5G4v5m0yZ08ySAFxv26dim86+oot8YdqT6gUViMkgkUvhmpBADubs/56zR/EeQcEYFCaKpookIrCALbom8ZPlJIV6wyrPwg7YefopwN69+iFhTbGVuoB//v3qnvzdtlEYg60whlyXK0azg5s+lrPouZajo61KQCqDXmlk2BpFDTsX6KIoE1gRDvc5O0McCyh8jlCX9anMTVOCMacmT2gu1bH2O1z/5geZEN6xhV3vh/cVdn0A9ca34O2CVuDBSCUyV045JwSjqrezo9s8Lt9Y3sOxwJAeLGT65KIsqEeAnCi1dw6vrmfYL/fZUF/iZ46nSoLlca3fCVxoUHJw=
